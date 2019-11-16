@@ -8,7 +8,7 @@ render() {
 		<Head>
 			<title>{ title }</title>
 		</Head>
-		<header><Link href='/'><a>Podcast</a></Link></header>
+		<header><Link href='/'><a>Podcasts</a></Link></header>
 
 		{ children }
 
