@@ -1,4 +1,4 @@
-import Error from 'next/error'
+import Error from './_error'
 import Layout from '../components/Layout'
 import ChannelTitle from '../components/ChannelTitle'
 import ChannelGrid from '../components/ChannelGrid'

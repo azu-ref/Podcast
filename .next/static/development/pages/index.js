@@ -12670,7 +12670,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Ffernando%2FDocumentos%2FPlatzi%2FNext.js%2Fpodcast%2Fpages%2Findex.js ***!
   \************************************************************************************************************************************************/
@@ -12693,5 +12693,5 @@ module.exports = dll_e9ad7d891b372a4221cf;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
