@@ -1,11 +1,15 @@
-import Link from 'next/link'
+import {Link} from '../routes'
+import slug from '../helpers/slug'
 
 export default class VolverLink extends React.Component {
 	render() {
 		const { clip } = this.props
 		return <>
 			<nav>
-				<Link href={`/channel?id=${clip.channel.id}`}>
+				<Link route='channel' params={{
+				slug: slug(clip.channel.title),
+				id: clip.channel.id
+				}}>
 					<a className='close'>
 						&lt; Volver
 					</a>

@@ -3,8 +3,13 @@ import Layout from '../components/Layout'
 import ChannelTitle from '../components/ChannelTitle'
 import ChannelGrid from '../components/ChannelGrid'
 import PodcastList from '../components/PodcastList'
+import PodcastPlayer from '../components/PodcastPlayer'
 
 export default class extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { openPodcast: null }
+  }
 
   static async getInitialProps({ query, res }) {
     try {
@@ -40,8 +45,23 @@ export default class extends React.Component {
     }
   }
 
+  openPodcast = (event, podcast) => {
+    event.preventDefault()
+    this.setState({
+      openPodcast: podcast
+    })
+  }
+  
+  closePodcast = (event, podcast) => {
+    event.preventDefault()
+    this.setState({
+      openPodcast: null
+    })
+  }
+
   render() {
     const  { channel, audioClips, series, statusCode } = this.props
+    const { openPodcast } = this.state
 
     if(statusCode !== 200) {
       return <Error statusCode={ statusCode } />
@@ -49,12 +69,12 @@ export default class extends React.Component {
 
     return <Layout title={ `Podcast | ${channel.title}` } >
       <ChannelTitle channel = { channel } />
-
+      { openPodcast && <PodcastPlayer clip={ openPodcast } onClose={ this.closePodcast } />}
       {series.length > 0 &&
         <ChannelGrid channels = {series} /> 
       }
     
-      <PodcastList audioClips={ audioClips } />
+      <PodcastList audioClips={ audioClips } openPodcast={ this.openPodcast } />
     </Layout>
   }
 
