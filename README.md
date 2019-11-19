@@ -5,6 +5,8 @@ para aprender Next.js en el curso de platzi
 
 ![Captura del home de la app](./.static-readme/index.png)
 
+[Link para ver la app](https://podcasts.azuref17.now.sh/)
+
 ## Como funciona?
 
 Requiere Node.js 12
