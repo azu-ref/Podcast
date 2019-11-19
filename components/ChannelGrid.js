@@ -35,6 +35,8 @@ export default class ChannelGrid extends React.Component {
         padding: 5px;
         font-size: 0.9em;
         font-weight: 600;
+        text-decoration: underline white;
+        color: #333;
         margin: 0;
         text-align: center;
       }

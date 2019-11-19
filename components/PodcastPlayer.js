@@ -47,7 +47,7 @@ export default class PodcastPlayer extends React.Component {
           display: flex;
           height: 100%;
           flex-direction: column;
-          background: #8756ca;
+          background: #3346FF;
           color: white;
         }
         picture {
